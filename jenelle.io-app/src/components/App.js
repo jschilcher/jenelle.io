@@ -1,11 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import Title from "./Title/title";
+import Logo from './Logo/logo';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <div>
+          <Logo/>
+        </div>
+        <div>
+          <Title/>
+        </div>
         <p>
           Learn all about your favorite MLB team
         </p>
