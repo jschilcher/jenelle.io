@@ -21,10 +21,10 @@ class App extends Component {
 
   async getTeamData() {
     let response = await axios.get(
-      "http://brew-roster-svc.us-e2.cloudhub.io/api/teams", 
-          {
+      "https://hp-api.onrender.com/api/characters", 
+          /*{
             "api-key": "api-key0ca80ddc-63f6-476e-b548-e5fb0934fc4b"
-          }
+          }*/
     );
     this.setState({
       teamData: response.data,
@@ -43,7 +43,7 @@ class App extends Component {
             </div>
             <div>
               <Title/>
-              <TeamTable/>
+              <TeamTable data= {this.state.teamData}/>
             </div>
             <p>
               Learn all about your favorite MLB team
