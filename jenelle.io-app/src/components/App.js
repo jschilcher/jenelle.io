@@ -3,6 +3,8 @@ import axios from "axios";
 import './App.css';
 import Title from "./Title/title";
 import Logo from './Logo/logo';
+import TeamTable from "./teamTable/teamTable";
+
 
 class App extends Component {
   constructor(props) {
@@ -16,9 +18,13 @@ class App extends Component {
     this.getTeamData();
   }
 
+
   async getTeamData() {
     let response = await axios.get(
-      "http://localhost:5000/api/songs"
+      "http://brew-roster-svc.us-e2.cloudhub.io/api/teams", 
+          {
+            "api-key": "api-key0ca80ddc-63f6-476e-b548-e5fb0934fc4b"
+          }
     );
     this.setState({
       teamData: response.data,
@@ -37,18 +43,11 @@ class App extends Component {
             </div>
             <div>
               <Title/>
+              <TeamTable/>
             </div>
             <p>
               Learn all about your favorite MLB team
             </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
           </header>
         </div>
       );
