@@ -4,6 +4,7 @@ import './App.css';
 import Title from "./Title/title";
 import Logo from './Logo/logo';
 import TeamTable from "./teamTable/teamTable";
+import Search from "./Search/searchBar";
 
 
 class App extends Component {
@@ -43,6 +44,7 @@ class App extends Component {
             </div>
             <div>
               <Title/>
+              <Search search= {this.state.teamData}/>
               <TeamTable data= {this.state.teamData}/>
             </div>
             <p>
