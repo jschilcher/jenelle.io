@@ -1,4 +1,5 @@
 import React from "react";
+import "./teamTable.css"
 
 function TeamTable(props){
     return(
@@ -6,7 +7,7 @@ function TeamTable(props){
   <thead>
     <tr>
       <th scope="col">Name</th>
-      <th scope="col">Nickname</th>
+      <th scope="col">House</th>
       <th scope="col">Location</th>
       <th scope="col">Leage</th>
     </tr>
@@ -16,7 +17,7 @@ function TeamTable(props){
         return(
           <tr>
             <td>{team.name}</td>
-            <td>{team.nickname}</td>
+            <td>{team.house}</td>
             <td>{team.location}</td>
             <td>{team.leage}</td>
           </tr>
