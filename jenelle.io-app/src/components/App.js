@@ -24,7 +24,7 @@ class App extends Component {
     let response = await axios.get(
       "https://hp-api.onrender.com/api/characters", 
           /*{
-            "api-key": "api-key0ca80ddc-63f6-476e-b548-e5fb0934fc4b"
+            auth: "api-key0ca80ddc-63f6-476e-b548-e5fb0934fc4b"
           }*/
     );
     this.setState({
@@ -44,8 +44,8 @@ class App extends Component {
             </div>
             <div>
               <Title/>
-              <Search search= {this.state.teamData}/>
-              <TeamTable data= {this.state.teamData}/>
+              <Search data= {this.state.teamData}/>
+            
             </div>
             <p>
               Learn all about your favorite MLB team
